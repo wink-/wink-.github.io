@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "wink-",
-    "repositoryName": "wink-.github.io",
-    "branch": "master"
-  },
-  "theme": {
-    "name": "Casper"
-  }
-}
+{"meta":{"username":"wink-","repositoryName":"wink-.github.io","branch":"master"},"site":{"title":"Winklog","description":"Wink's not so epic digital archive.","url":"https://wink-.github.io"},"socialnetwork":{},"theme":{"name":"Casper","url":"//wink-.github.io/themes/Casper"}}
