@@ -1,5 +1,5 @@
 = What Should My First Real Post Be About?
-:ht tags:First post, dogs, dog
+:ht-tags: First post, dogs, dog
 
 == Practice AsciiDocs format
 
