@@ -1,1 +1,8 @@
-= First Post
+= What Should My First Real Post Be About?
+:ht tags:First post, dogs, dog
+
+== Practice AsciiDocs format
+
+I figure I will write a post about the dogs in my life. Duke, Magee, Diggy, and Bones.
+
+image::http://i.imgur.com/SfBIi2a.jpg[Duke]
