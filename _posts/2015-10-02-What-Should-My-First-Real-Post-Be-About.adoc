@@ -1,4 +1,5 @@
 = What Should My First Real Post Be About?
+
 :ht-tags: First post, dogs, dog
 
 == Pups
@@ -8,3 +9,6 @@ I figure I will write a post about the dogs in my life. Duke, Magee, Diggy, and 
 Duke is the one show below. His nicknames are the Big Cat, the Big Pooper, the Super Pooper, the Big Dog, Boss, Dukie, and the Dukester.
 
 image::http://i.imgur.com/SfBIi2a.jpg[]
+
+== Cats
+Who needs them?!
