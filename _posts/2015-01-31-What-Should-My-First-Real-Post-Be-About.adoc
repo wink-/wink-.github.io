@@ -1,6 +1,7 @@
 = What Should My First Real Post Be About?
 
-:ht-tags: First post, dogs, dog
+:hp-tags: First post, dogs, dog
+:published_at: 2015-01-31
 
 == Pups
 
