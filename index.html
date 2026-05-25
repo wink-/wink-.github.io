@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rob Winkky — GitHub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header { margin-bottom: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: .25rem; }
+    header p { color: #8b949e; font-size: .95rem; }
+    header a { color: #58a6ff; text-decoration: none; }
+    header a:hover { text-decoration: underline; }
+    h2 {
+      color: #f0f6fc;
+      font-size: 1.1rem;
+      margin: 2rem 0 .75rem;
+      padding-bottom: .4rem;
+      border-bottom: 1px solid #21262d;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: .75rem;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 8px;
+      padding: 1rem;
+      transition: border-color .2s;
+    }
+    .card:hover { border-color: #388bfd; }
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      margin-bottom: .25rem;
+    }
+    .card-title a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+    .card-title a:hover { text-decoration: underline; }
+    .card-desc { color: #8b949e; font-size: .82rem; margin-bottom: .5rem; min-height: 1.3em; }
+    .card-links { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .card-links a {
+      color: #8b949e;
+      text-decoration: none;
+      font-size: .78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+    }
+    .card-links a:hover { color: #58a6ff; }
+    .card-links a.live { color: #3fb950; }
+    .badge {
+      display: inline-block;
+      font-size: .65rem;
+      padding: .1rem .4rem;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+    .badge-pages { background: #1f2937; color: #58a6ff; border: 1px solid #1f2937; }
+    .badge-site  { background: #0d2818; color: #3fb950; border: 1px solid #1f4428; }
+    .badge-star  { color: #e3b341; }
+    .badge-arch  { background: #29222e; color: #a371f7; border: 1px solid #3b2d45; }
+    .section-note { color: #484f58; font-size: .78rem; margin-top: .5rem; }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #21262d;
+      color: #484f58;
+      font-size: .8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Rob Winkky</h1>
+      <p><a href="https://github.com/wink-">@wink-</a> on GitHub</p>
+    </header>
+
+    <!-- Live Sites -->
+    <h2>&#128640; Live Sites</h2>
+    <div class="grid" id="live"></div>
+
+    <!-- AI / Tools -->
+    <h2>&#129302; AI &amp; Tools</h2>
+    <div class="grid" id="ai"></div>
+
+    <!-- Project Zomboid -->
+    <h2>&#127918; Project Zomboid</h2>
+    <div class="grid" id="pz"></div>
+
+    <!-- Laravel / PHP -->
+    <h2>&#128269; Laravel &amp; PHP</h2>
+    <div class="grid" id="laravel"></div>
+
+    <!-- Content Sites -->
+    <h2>&#127760; Content Sites</h2>
+    <div class="grid" id="content"></div>
+
+    <!-- Neovim -->
+    <h2>&#128221; Neovim</h2>
+    <div class="grid" id="nvim"></div>
+
+    <!-- Gaming -->
+    <h2>&#127918; Gaming</h2>
+    <div class="grid" id="gaming"></div>
+
+    <!-- Archive -->
+    <h2>&#128193; Archive</h2>
+    <div class="grid" id="archive"></div>
+
+    <footer>
+      <p>Auto-generated &mdash; last updated May 2026</p>
+    </footer>
+  </div>
+
+  <script>
+    const repos = [
+      // Live Sites
+      { name: "photo-card-lab", desc: "Private photo creation lab for family and friends cards", site: "https://wink-.github.io/photo-card-lab/", cat: "live" },
+      { name: "the-independent-home-mockups", desc: "Static mockups for The Independent Home handwritten-first redesign", site: "https://wink-.github.io/the-independent-home-mockups/", cat: "live" },
+      { name: "open-brain-memory-demo", desc: "Demo of Hermes local memory, Open Brain shared vector memory, session search, and skills", site: "https://wink-.github.io/open-brain-memory-demo/", cat: "live" },
+      { name: "theindependenthome", desc: "The Independent Home", site: "https://theindependenthome.vercel.app", cat: "live" },
+      { name: "terminalschool", desc: "Terminal School", site: "https://wink-.github.io/terminalschool/", cat: "live" },
+      { name: "silver-tracker", desc: "Silver Tracker", site: "https://wink-.github.io/silver-tracker/", cat: "live" },
+      { name: "aitutor", desc: "AI Tutor", site: "https://wink-.github.io/aitutor/", cat: "live" },
+      { name: "winkkyfarms", desc: "Family farm stories — sharing agricultural heritage, seasonal farming life, and sustainable practices", site: "https://winkkyfarms.com/", cat: "live" },
+      { name: "livewire-datatables", desc: "Advanced datatables using Laravel, Livewire, Tailwind CSS and Alpine JS", site: "https://livewire-datatables.com/", cat: "live" },
+
+      // AI & Tools
+      { name: "candle-analyzer", desc: "Deterministic OHLC candle analyzer with MCP server for AI agent integration", cat: "ai" },
+      { name: "claude-zai", desc: "How to use ZAI GLM Coding plan without messing up your existing Claude Code", cat: "ai", stars: 1 },
+      { name: "ai-sources", desc: "Information used for AI assistance", cat: "ai" },
+      { name: "pzmcp", desc: "Project Zomboid MCP Server", cat: "ai", stars: 1 },
+      { name: "pz-mcp-server", desc: "Project Zomboid MCP Server", cat: "ai", stars: 4 },
+      { name: "laraclaw", desc: "Laravel tooling", cat: "ai" },
+      { name: "open-brain-memory-demo", desc: "Demo of Hermes local memory, Open Brain, session search, and skills", cat: "ai", site: "https://wink-.github.io/open-brain-memory-demo/" },
+      { name: "mdviewer", desc: "Markdown viewer", cat: "ai" },
+
+      // Project Zomboid
+      { name: "pz_mod_builder", desc: "Tools for building Project Zomboid b42 mods", cat: "pz" },
+      { name: "pzmodbuilder", desc: "PZ Mod Builder", cat: "pz" },
+      { name: "modwizard", desc: "Mod Wizard", cat: "pz" },
+      { name: "pzmcp", desc: "Project Zomboid MCP Server", cat: "pz", stars: 1 },
+      { name: "pz-mcp-server", desc: "Project Zomboid MCP Server", cat: "pz", stars: 4 },
+      { name: "Zomboid-Mods", desc: "Project Zomboid B42 mods", cat: "pz" },
+      { name: "PZ-Mod---Doc", desc: "PZ Mod Documentation", cat: "pz" },
+      { name: "projectzomboid", desc: "Project Zomboid", cat: "pz" },
+      { name: "mods", desc: "Game mods", cat: "pz" },
+
+      // Laravel / PHP
+      { name: "livewire-datatables", desc: "Advanced datatables using Laravel, Livewire, Tailwind CSS and Alpine JS", cat: "laravel", site: "https://livewire-datatables.com/" },
+      { name: "Repositories", desc: "Laravel Repositories — abstract the database layer", cat: "laravel", site: "http://bosnadev.com" },
+      { name: "crud-generator", desc: "Laravel 5 CRUD Generator", cat: "laravel", site: "https://packagist.org/packages/appzcoder/crud-generator" },
+      { name: "odin", desc: "Roles and Permissions implementation on Laravel 5.4", cat: "laravel" },
+      { name: "laravelcodespace", desc: "Learning to use GitHub Codespaces with Laravel", cat: "laravel" },
+      { name: "laraveltips", desc: "Laravel Tips", cat: "laravel" },
+      { name: "jet", desc: "Laravel Jet", cat: "laravel" },
+      { name: "dashpy", desc: "Dash Python", cat: "laravel" },
+      { name: "radiant-manager", desc: "Radiant Manager", cat: "laravel" },
+      { name: "home-manager", desc: "Home Manager", cat: "laravel" },
+      { name: "pymanager", desc: "Py Manager", cat: "laravel" },
+
+      // Content Sites
+      { name: "winkky-farms", desc: "Family farm stories — sharing our agricultural heritage, seasonal farming life, and sustainable practices", cat: "content" },
+      { name: "radiant-home-solutions", desc: "Professional handyman services — quality home repair, maintenance, and improvement", cat: "content" },
+      { name: "radiant-gardens", desc: "Radiant Gardens", cat: "content" },
+      { name: "garden", desc: "Garden", cat: "content" },
+      { name: "evergreen", desc: "Evergreen", cat: "content" },
+
+      // Neovim
+      { name: "lazyvim", desc: "Sensible defaults nvim baseline integrated with Laravel and flavored with useful additions", cat: "nvim" },
+
+      // Gaming
+      { name: "NerdPack", desc: "All your nerd tools for World of Warcraft!", cat: "gaming", site: "http://www.nerdpackaddon.site", archived: true },
+      { name: "Nerdpack-Zylla", desc: "Zylla's Combat Routines for NerdPack", cat: "gaming", stars: 1 },
+      { name: "NerdPack-NoC", desc: "NO CARRIER's combat rotations for NerdPack", cat: "gaming", stars: 1 },
+      { name: "NerdPack-CambySubMod", desc: "NerdPack Camby Submod", cat: "gaming" },
+      { name: "MQ2Bot", desc: "MQ2 Bot", cat: "gaming" },
+      { name: "rotations", desc: "WoW CR rotations", cat: "gaming" },
+      { name: "playground", desc: "Rotations for NerdPack", cat: "gaming" },
+      { name: "7DTDMods", desc: "7 Days to Die Mods", cat: "gaming" },
+      { name: "7DTDConfigs", desc: "7 Days to Die Configs", cat: "gaming" },
+
+      // Archive
+      { name: "sites-knowledge-base", desc: "Master knowledge base and templates for Hugo content sites", cat: "archive", stars: 1 },
+      { name: "one-click-hugo-cms", desc: "One-Click Hugo CMS", cat: "archive" },
+      { name: "memories", desc: "Memories", cat: "archive" },
+      { name: "the-independent-home-mockups", desc: "Static mockups for The Independent Home redesign", cat: "archive", site: "https://wink-.github.io/the-independent-home-mockups/" },
+      { name: "resume", desc: "Resume", cat: "archive" },
+      { name: "dashboard", desc: "Dashboard", cat: "archive" },
+      { name: "keywordtutor", desc: "Keyword Tutor", cat: "archive" },
+      { name: "streetcat", desc: "Street Cat", cat: "archive" },
+      { name: "business-listings", desc: "Business Listings", cat: "archive" },
+      { name: "wink-model-generator", desc: "Wink Model Generator", cat: "archive" },
+      { name: "wink-controller-generator", desc: "Wink Controller Generator", cat: "archive" },
+      { name: "wink-volt-generator", desc: "Wink Volt Generator", cat: "archive" },
+      { name: "wink-view-generator", desc: "Wink View Generator", cat: "archive" },
+      { name: "wink-generator", desc: "Wink Generator", cat: "archive" },
+      { name: "autogen", desc: "Auto Generator", cat: "archive" },
+      { name: "wheel", desc: "Wheel", cat: "archive" },
+      { name: "laraclaw", desc: "Laraclaw", cat: "archive" },
+      { name: "silver-tracker", desc: "Silver Tracker", cat: "archive", site: "https://wink-.github.io/silver-tracker/" },
+      { name: "SuperClaude", desc: "SuperClaude", cat: "archive" },
+      { name: "phpmyadmin", desc: "phpMyAdmin fork", cat: "archive", site: "http://www.phpmyadmin.net/" },
+      { name: "loki", desc: "Loki", cat: "archive" },
+      { name: "Regal-Entire-Rook-HTML", desc: "Regal Entire Rook HTML", cat: "archive" },
+      { name: "core-old", desc: "Core (old)", cat: "archive", archived: true },
+      { name: "devcore", desc: "Dev Core", cat: "archive" },
+      { name: "coredev", desc: "Core Dev", cat: "archive" },
+      { name: "pyadblock", desc: "Ad Blocker", cat: "archive" },
+      { name: "cryptations", desc: "Cryptations", cat: "archive" },
+      { name: "fresh", desc: "Must have Laravel packages", cat: "archive" },
+      { name: "odin", desc: "Roles and Permissions on Laravel 5.4", cat: "archive" },
+      { name: "work_playground", desc: "Work Playground", cat: "archive" },
+      { name: "sft-boilerplate", desc: "SFT Boilerplate", cat: "archive" },
+      { name: "pma", desc: "Install phpMyAdmin on Laravel Homestead", cat: "archive" },
+      { name: "sft", desc: "Web app for work", cat: "archive" },
+      { name: "laravel-api-generator", desc: "Laravel API/Scaffold/CRUD Generator", cat: "archive" },
+      { name: "larafresh", desc: "Blank Laravel install with gulp, Way Generators, Debugbar", cat: "archive" },
+      { name: "how2eq", desc: "How to EQ", cat: "archive" },
+      { name: "default", desc: "Practice for work", cat: "archive" },
+      { name: "winkbot", desc: "Winkbot", cat: "archive" },
+      { name: "omni", desc: "Omni", cat: "archive" },
+      { name: "pluto2", desc: "Pluto2", cat: "archive" },
+      { name: "Probably", desc: "The Probably Engine", cat: "archive" },
+      { name: "Probably_W-Arms", desc: "Arms warrior profile for Probably Engine", cat: "archive" },
+      { name: "simpl", desc: "Simcraft Impl", cat: "archive" },
+      { name: "blah", desc: "asdf", cat: "archive" },
+    ];
+
+    // Deduplicate by name, keep first occurrence (has best cat placement)
+    const seen = new Set();
+    const unique = repos.filter(r => {
+      if (seen.has(r.name)) return false;
+      seen.add(r.name);
+      return true;
+    });
+
+    function renderCard(r) {
+      const badges = [];
+      if (r.archived) badges.push('<span class="badge badge-arch">archived</span>');
+      if (r.stars) badges.push(`<span class="badge badge-star">&#9733; ${r.stars}</span>`);
+
+      let links = `<a href="https://github.com/wink-/${r.name}">&#128187; Code</a>`;
+      if (r.site) {
+        const isPages = r.site.includes('github.io');
+        links += ` <a href="${r.site}" class="live">&#127760; ${isPages ? 'Pages' : 'Live'}</a>`;
+      }
+
+      return `<div class="card">
+        <div class="card-title">
+          <a href="https://github.com/wink-/${r.name}">${r.name}</a>
+          ${badges.join(' ')}
+        </div>
+        <div class="card-desc">${r.desc || ''}</div>
+        <div class="card-links">${links}</div>
+      </div>`;
+    }
+
+    // Group by category
+    const groups = {};
+    unique.forEach(r => {
+      (groups[r.cat] = groups[r.cat] || []).push(r);
+    });
+
+    // Render each section
+    const mapping = { live: 'live', ai: 'ai', pz: 'pz', laravel: 'laravel', content: 'content', nvim: 'nvim', gaming: 'gaming', archive: 'archive' };
+    Object.entries(mapping).forEach(([cat, id]) => {
+      const el = document.getElementById(id);
+      if (el && groups[cat]) {
+        el.innerHTML = groups[cat].map(renderCard).join('');
+      } else if (el) {
+        el.parentElement.remove();
+      }
+    });
+  </script>
+</body>
+</html>
